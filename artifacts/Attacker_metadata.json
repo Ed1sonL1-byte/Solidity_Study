@@ -1,0 +1,193 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_vulnerableBankAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "stolenAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "AttackCompleted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "initialDeposit",
+						"type": "uint256"
+					}
+				],
+				"name": "AttackStarted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "count",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "bankBalance",
+						"type": "uint256"
+					}
+				],
+				"name": "ReentrancyTriggered",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "attack",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "attackCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "attackLimit",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "vulnerableBank",
+				"outputs": [
+					{
+						"internalType": "contract VulnerableBank",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawLoot",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Attacker.sol": "Attacker"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Attacker.sol": {
+			"keccak256": "0x79b7caa8cba8494d88f971548d9d5cf60bb2e0f22ff50e835a6adbd8b5fb7a1e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://044c2fc401f752f241de17079fcf9b790f293ac4e931d4c4abe115050936c3c4",
+				"dweb:/ipfs/QmZs883MgfNM2tpr5EkzdFHjziTKT2U2qoLcFsagjnsJtS"
+			]
+		},
+		"VulnerableBank.sol": {
+			"keccak256": "0x57b51cd1453e41d1bf18b8ea053c0c4efc516faf8850eedf1a12fa172b51ec44",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8ad8abe647070f8968e6e78a72dc8a5e93bc2c713d8865a115395631fc67db32",
+				"dweb:/ipfs/Qmefzv1hfxUYi6gouQQCPLjU2a7WHuqahkrb271GNnezzQ"
+			]
+		}
+	},
+	"version": 1
+}
